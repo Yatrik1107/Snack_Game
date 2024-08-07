@@ -1,6 +1,14 @@
 import pygame
 import random
 import os
+import sys
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 #initailizing pygame!
 pygame.init()
@@ -13,11 +21,11 @@ gameWindow = pygame.display.set_mode((window_width,window_height))
 pygame.display.set_caption('My first python game')
 
 # Background Images
-bgimg = pygame.image.load('./Images/InGameBackground.jpg')
+bgimg = pygame.image.load(resource_path('./Images/InGameBackground.jpg'))
 bgimg = pygame.transform.scale( bgimg, ( window_width, window_height ) ).convert_alpha() # convert alpha is used for smooth bliting of background image!
-startimg = pygame.image.load('./Images/Snake.jpg')
+startimg = pygame.image.load(resource_path('./Images/Snake.jpg'))
 startimg = pygame.transform.scale( startimg, (window_width,window_height) ).convert_alpha()
-endimg = pygame.image.load('./Images/GameOver.jpg')
+endimg = pygame.image.load(resource_path('./Images/GameOver.jpg'))
 endimg = pygame.transform.scale ( endimg, (window_width,window_height) ).convert_alpha()
 
 # Defining Game Colors
