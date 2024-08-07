@@ -208,3 +208,5 @@ def gameloop():
     
 welcome()
 # gameloop()
+
+# command: to generate the exe file for the snack game : pyinstaller --onefile --add-data "Images;Images" --add-data "Sound;Sound" SnakeGame.py
