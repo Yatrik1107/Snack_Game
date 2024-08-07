@@ -189,12 +189,12 @@ def gameloop():
             if head in snake_list[:-1]: #if any cordinates of head in list excluding last element of the list then, game will be over!
 #                 print(snake_list) to understand excactly!
                 game_over = True
-                pygame.mixer.music.load('Sound/Gameover.mp3')
+                pygame.mixer.music.load(resource_path('Sound/Gameover.mp3'))
                 pygame.mixer.music.play()
 
             if snake_x<0 or snake_x>window_width or snake_y<0 or snake_y>window_height:
                 game_over = True
-                pygame.mixer.music.load('Sound/Gameover.mp3')
+                pygame.mixer.music.load(resource_path('Sound/Gameover.mp3'))
                 pygame.mixer.music.play()
             
 
