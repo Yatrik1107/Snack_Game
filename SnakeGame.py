@@ -163,7 +163,7 @@ def gameloop():
                 snake_length += 5
 
                 # for food music 
-                pygame.mixer.music.load('Sound/Food.mp3')
+                pygame.mixer.music.load(resource_path('Sound/Food.mp3'))
                 pygame.mixer.music.play()
 
                 if score > int(highscore):
